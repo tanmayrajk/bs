@@ -1,6 +1,7 @@
 const heroExplanationEl = document.getElementById('hero-explanation');
 const exampleGifsEl = document.getElementById('example-gifs')
 const exampleSectionEl = document.getElementById('examples')
+const examplesText = document.getElementById('examples-text')
 
 window.addEventListener('load', e => {
     const children = heroExplanationEl.children;
@@ -41,4 +42,13 @@ window.addEventListener('load', e => {
         exampleGif.style.top = `${randomY}px`;
         exampleGif.style.left = `${randomX}px`;
     }
+    // const gifs = exampleGifsEl.children;
+    // const centerX = exampleSectionEl.offsetWidth / 2;
+    // const centerY = exampleSectionEl.offsetHeight / 2;
+    // const safeWidth = examplesText.offsetWidth + 40;
+    // const safeHeight = examplesText.offsetHeight + 40;
+    // const cols = 5
+    // const rows = 5
+    // const colHeight = exampleSectionEl.offsetHeight / cols
+    // const rowWidth = exampleSectionEl.offsetWidth / rows
 })

@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    --blue: #2B34FB;
+    --cyan: #04FCFE;
+    --red: #FD0100;
+    --white: #FFFFFF;
+    --yellow: #F9F702;
+    --black: #000000;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Ultralight.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Heavy.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Black.otf') format('opentype');
+  font-weight: 900;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#hero {
+    width: 100vw;
+    /* padding: 11em; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('skybg.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-bs {
+    width: 67%;
+    user-select: none;
+}
+
+#hero-explanation {
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 2.3vw;
+    margin-top: 1.5em;
+    
+}
+
+.hoverable-word {
+    transition: background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hoverable-word:hover {
+    background-color: var(--cyan);
+}
+
+#hero a {
+    margin-top: 3em;
+    display: flex;
+    gap: 10px;
+    height: 67px;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    background: var(--red);
+    color: var(--white);
+    padding: 7px 0;
+}
+
+.track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite reverse;
+}
+
+.track span {
+    padding-right: 0.25em;
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -2px;
+    font-size: 2vw;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#examples {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--yellow);
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+}
+
+#examples-text {
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -2px;
+    font-size: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tile {
+    position: absolute;
+    width: 400px;
+    transition: 200ms ease-in-out;
+}
+
+.tile:hover {
+    transform: scale(1.2) rotate(2deg);
+    z-index: 20;
+    filter: brightness(1.1);
+}
+
+#faq {
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: var(--cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3em;
+}
+
+.q {
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 1.7vw;
+}
+
+.a {
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.4vw;
+}
+
+#qnas {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    max-width: 700px;
+}
+
+footer {
+    background: var(--blue);
+    color: var(--white);
+    padding: 14px 0;
+    font-family: 'SF Pro Display', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1vw;
+}

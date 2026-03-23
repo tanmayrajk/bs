@@ -51,4 +51,17 @@ window.addEventListener('load', e => {
     // const rows = 5
     // const colHeight = exampleSectionEl.offsetHeight / cols
     // const rowWidth = exampleSectionEl.offsetWidth / rows
+    // let currTile = 1
+    // for (let i = 0; i < cols; i++) {
+    //     const col = cols[i];
+    //     for (let j = 0; j < rows; j++) {
+    //         const row = rows[j];
+    //         const tile = document.querySelector(`.tile-${currTile}`)
+    //         console.log(tile)
+    //         console.log(colHeight * i, rowWidth * j)
+    //         tile.style.top = `${colHeight * i}px`
+    //         tile.style.left = `${rowWidth * j}px`
+    //         currTile += 1
+    //     }
+    // }
 })
